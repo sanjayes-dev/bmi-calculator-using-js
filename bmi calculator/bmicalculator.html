@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALULATOR MADE BY SJ</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="text-center text-success">BMI CALCULATOR MADE BY SJ</h1>
+    <div class="row">
+        <div class="col-4"></div>
+        
+        <div class="col-4  my-4" >
+            <label for="">ENTER YOUR HEIGHT:</label>
+            <input id="height" type="text" class="form-control">
+            
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4  my-4">
+             <label for="">ENTER YOUR WEIGHT:</label>
+            <input id="weight" type="text" class="form-control">
+            <div class="text-center">
+                <!-- function call -->
+                <button onclick="btnclick()" class="btn btn-success my-4">calculate</button>
+
+            </div>
+            <div >
+                    RESULT:
+            </div>
+            
+        </div>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+    </div> 
+    <script>
+        function btnclick(){
+            let yourheight =document.getElementById('height').value
+            console.log(yourheight);
+             let yourheightM=yourheight/100
+            let yourweight =document.getElementById('weight').value
+            console.log(yourweight);
+            let BMI = yourweight / (yourheightM * yourheightM)
+            console.log(BMI.toFixed(2));
+            alert(`your BMI = `+BMI.toFixed(2  ))
+
+        }
+    </script> 
+</body>
+</html>
