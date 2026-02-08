@@ -31,8 +31,8 @@
                 <button onclick="btnclick()" class="btn btn-success my-4">calculate</button>
 
             </div>
-            <div >
-                    RESULT:
+            <div id="result" >
+                    
             </div>
             
         </div>
@@ -49,7 +49,7 @@
             console.log(yourweight);
             let BMI = yourweight / (yourheightM * yourheightM)
             console.log(BMI.toFixed(2));
-            alert(`your BMI = `+BMI.toFixed(2  ))
+            result.innerHTML =`YOUR BMI IS = ${BMI.toFixed(2)}`
 
         }
     </script> 
